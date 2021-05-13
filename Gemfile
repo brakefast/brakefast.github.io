@@ -4,6 +4,14 @@ source "https://rubygems.org"
 
 gemspec
 
+gem "webrick"
+
+#gem "jekyll", "~> 3.9.0"
+
+#gem "minima", "~> 2.5"
+
+#gem "github-pages", "~> 214", group: :jekyll_plugins
+
 group :test do
   gem "html-proofer", "~> 3.18"
 end
@@ -16,4 +24,5 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+# gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
